@@ -1,0 +1,48 @@
+@mixin flex($jus: center, $alg: center){
+    display: flex;
+    justify-content: $jus;
+    align-items: $alg;
+}
+@mixin dim($ln, $hg){
+    width: $ln;
+    height: $hg;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    @media (min-width: 700px) {
+      font-size: calc(10px + 0.5vw);
+    }
+    scroll-behavior: smooth;
+}
+
+#container{
+    @include dim(100vw, 100vh);
+    @include flex();
+    #board{
+        @include dim(70vh, 70vh);
+        border: 2px solid black;
+        border-radius: 2px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .box_grid{
+            border: 1px dotted black;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            div{
+                border: 1px solid black;
+                cursor: pointer;
+            }
+        }
+    }
+    #buttons{
+        @include dim(40vw, 80vh);
+        // border: 1px solid green;
+    }
+}
