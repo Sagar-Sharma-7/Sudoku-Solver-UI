@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,10 @@ html {
   html {
     font-size: calc(10px + 0.5vw);
   }
+}
+
+body {
+  font-family: 'Signika', sans-serif;
 }
 
 #container {
@@ -39,10 +44,10 @@ html {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
 }
 
 #container #board .box_grid {
-  border: 1px dotted black;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -56,6 +61,62 @@ html {
 
 #container #buttons {
   width: 40vw;
-  height: 80vh;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#container #buttons button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#container #buttons #solve_btn {
+  width: 28vw;
+  height: 12vh;
+  border-radius: 10px;
+  background-color: #242BFF;
+  color: white;
+  font-size: 1.8rem;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+#container #buttons #solve_btn:hover {
+  background-color: #060ddf;
+}
+
+#container #buttons #num_pad {
+  width: 28vw;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7px;
+}
+
+#container #buttons #num_pad button {
+  padding: 5vh 0;
+  font-size: 1.4rem;
+  color: #242BFF;
+  background-color: #EAEEF4;
+  border-radius: 10px;
+}
+
+#container #buttons #num_pad button:hover {
+  background-color: #e2e4e8;
 }
 /*# sourceMappingURL=style.css.map */

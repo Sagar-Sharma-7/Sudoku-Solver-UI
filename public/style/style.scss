@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
 @mixin flex($jus: center, $alg: center){
     display: flex;
     justify-content: $jus;
@@ -22,6 +24,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    font-family: 'Signika', sans-serif;
+}
+
 #container{
     @include dim(100vw, 100vh);
     @include flex();
@@ -31,8 +37,9 @@ html {
         border-radius: 2px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2px;
         .box_grid{
-            border: 1px dotted black;
+            // border: 1px dotted black;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             div{
@@ -42,7 +49,42 @@ html {
         }
     }
     #buttons{
-        @include dim(40vw, 80vh);
-        // border: 1px solid green;
+        @include dim(40vw, 70vh);
+        @include flex(space-between, center);
+        flex-direction: column;
+        button{
+            outline: none;
+            border:none;
+            cursor: pointer;
+        }
+        #solve_btn{
+            @include dim(28vw, 12vh);
+            border-radius: 10px;
+            background-color:#242BFF;
+            color: white;
+            font-size: 1.8rem;
+            transition: 400ms;
+            &:hover{
+                background-color: #060ddf;
+            }
+        }
+        #num_pad{
+            // border: 1px solid green;
+            @include dim(28vw, auto);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 7px;
+            button{
+                padding: 5vh 0;
+                font-size:1.4rem;
+                color: #242BFF;
+                background-color: #EAEEF4;
+                border-radius: 10px;
+                &:hover{
+                    background-color: #e2e4e8;
+                }
+            }
+
+        }
     }
 }
