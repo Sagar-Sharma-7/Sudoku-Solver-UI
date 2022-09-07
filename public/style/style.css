@@ -19,6 +19,7 @@ html {
 
 body {
   font-family: 'Signika', sans-serif;
+  background-color: black;
 }
 
 #container {
@@ -38,16 +39,16 @@ body {
 #container #board {
   width: 70vh;
   height: 70vh;
-  border: 2px solid black;
   border-radius: 2px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2px;
+  grid-gap: 5px;
 }
 
 #container #board .box_grid {
+  border: 2px dotted black;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -55,8 +56,19 @@ body {
 }
 
 #container #board .box_grid div {
-  border: 1px solid black;
+  border: 1px solid white;
   cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #container #buttons {
@@ -87,15 +99,49 @@ body {
   width: 28vw;
   height: 12vh;
   border-radius: 10px;
-  background-color: #242BFF;
   color: white;
   font-size: 1.8rem;
-  -webkit-transition: 400ms;
-  transition: 400ms;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #FA8BFF, #2BD2FF, #2BFF88);
+  -webkit-animation: border 5s linear infinite;
+          animation: border 5s linear infinite;
 }
 
 #container #buttons #solve_btn:hover {
-  background-color: #060ddf;
+  color: #ACFBAF;
+}
+
+@-webkit-keyframes border {
+  0% {
+    border-width: 3px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #FA8BFF, #2BD2FF, #2BFF88);
+  }
+  50% {
+    border-width: 3px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ACFBAF, #63FD86);
+  }
+}
+
+@keyframes border {
+  0% {
+    border-width: 3px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #FA8BFF, #2BD2FF, #2BFF88);
+  }
+  50% {
+    border-width: 3px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ACFBAF, #63FD86);
+  }
 }
 
 #container #buttons #num_pad {
