@@ -42,21 +42,13 @@ body {
   border-radius: 2px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
   grid-gap: 5px;
 }
 
-#container #board .box_grid {
-  border: 2px dotted black;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-}
-
-#container #board .box_grid div {
-  border: 1px solid white;
+#container #board div {
+  border: 1px solid #7d7d7d;
   cursor: pointer;
   color: white;
   font-size: 1.3rem;

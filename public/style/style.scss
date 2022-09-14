@@ -36,20 +36,15 @@ body{
         @include dim(70vh, 70vh);
         border-radius: 2px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(9, 1fr);
         grid-gap: 5px;
-        .box_grid{
-            border: 2px dotted black;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
             div{
-                border: 1px solid white;
+                border: 1px solid rgb(125, 125, 125);
                 cursor: pointer;
                 color: white;
                 font-size: 1.3rem;
                 @include flex();
             }
-        }
     }
     #buttons{
         @include dim(40vw, 70vh);
